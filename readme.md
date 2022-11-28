@@ -11,4 +11,4 @@ License: [MIT](./license.md "Смотреть лицензию")
 
 1. [Рекомендации по быстрой загрузке HTML и CSS](boost-css.md)
 2. [Единицы измерения и выравнивание блоков в CSS](block-css.md)
-3. [Псевдоэлементы](block-css.html)
+3. [Псевдоэлементы](block-css.html) - [Смотреть на сайте GitHub](https://denor74.github.io/WEB-reminder/block-css.html)
