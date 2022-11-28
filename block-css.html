@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,14 +8,68 @@
     <link rel="stylesheet" type="text/css" href="/css/style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="before-after">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda sit dolores iste, corporis neque vitae animi illo voluptatem esse consectetur saepe non unde soluta reiciendis deserunt eaque harum optio quasi placeat voluptas tempore, provident officiis aperiam! Recusandae, rem accusantium.</div>
+    <div class="before-after">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit assumenda sit dolores
+        iste, corporis neque vitae animi illo voluptatem esse consectetur saepe non unde soluta reiciendis deserunt
+        eaque harum optio quasi placeat voluptas tempore, provident officiis aperiam! Recusandae, rem accusantium.</div>
     <ol>
         <li>Пункт 1</li>
         <li>Пункт 2</li>
         <li>Пункт 3</li>
     </ol>
 
-<p><a href="#">Открыть страницу</a></p>
+    <fieldset>
+        <legend>Анимированная стрелка</legend>
+        <a href="#">Открыть страницу</a>
+    </fieldset>
+    <fieldset>
+        <legend>::first-letter & ::first-line</legend>
+        <p class="p-first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error rerum corrupti magnam, velit
+            culpa ipsa nam
+            placeat explicabo odit tempora?</p>
+        <p class="p-first-line">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error rerum corrupti magnam,
+            velit culpa ipsa nam
+            placeat explicabo odit tempora?</p>
+    </fieldset>
+    <fieldset>
+        <legend>::placeholder</legend>
+        <input type="text" placeholder="Введдите текст">
+
+    </fieldset>
+    <fieldset>
+        <legend>::selection</legend>
+        <p class="selection">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error rerum corrupti magnam, velit
+            culpa ipsa nam
+            placeat explicabo odit tempora?</p>
+
+    </fieldset>
+    <fieldset>
+        <legend>::marker</legend>
+        <ul>
+            <li>Один</li>
+            <li>Два</li>
+            <li>Три</li>
+            <li>Четыре</li>
+        </ul>
+
+    </fieldset>
+    <fieldset>
+        <legend>::backdrop</legend>
+        <button id="open">Открыть модальное окно</button>
+        <dialog>
+            <form>
+                <p><input name="login" required placeholder="Введитте Логин"></p>
+                <p><input name="login" required placeholder="Введитте пароль"></p>
+                <p><button type="submit">Нажать</button>
+                    <button id="close">Закрыть окно</button></p>
+
+            </form>
+        </dialog>
+        <script src="script.js"></script>
+
+
+    </fieldset>
 </body>
+
 </html>

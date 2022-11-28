@@ -31,4 +31,63 @@ li::before {
     font-size: 30px;
     color: blue;
 }
+a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: 20px;
+}
+a::after {
+    content: "";
+    margin-left: 5px;
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-image: url(/img/arrow-alt-right.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transition: 0.3s;
+}
 
+a:hover::after {
+    transition: 00.3s;
+    transform: translateX(20px);
+}
+.p-first {
+    font-size: 20px;
+}
+.p-first::first-letter {
+    color: brown;
+}
+.p-first-line::first-line {
+    color: blueviolet;
+    max-width: 200px;
+    font-size: 20px;
+}
+input {
+    display: block;
+    margin-top: 20px;
+    font-size: 20px;
+}
+input::placeholder {
+    color: antiquewhite;
+    transition: 0,5s;
+}
+input:focus::placeholder {
+    color: transparent;
+    transition: 0,5s;
+}
+.selection::selection {
+    color: beige;
+    background-color: tomato;
+}
+ul li::marker {
+    color: red;
+}
+/*dialog & backdrop ЕСли в dialog прописать open - форма будет всегда видна*/
+dialog {
+    width: 300px;
+}
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0.7);
+}
