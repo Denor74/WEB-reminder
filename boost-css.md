@@ -15,3 +15,13 @@
 >  Например записывать `padding: 2px 0 34px 40px` вместо набора `padding-top + padding-right + padding-bottom + padding-left`
 
 5. Селектор **`*`** использовать в исключительных случаях
+
+6. **Минимизировать CSS файлы**
+> Использовать сервисы для сжатия css:
+1. [CSS Minifier](https://css-minifier.com/)
+2. [CSS Compressor](https://csscompressor.com/)
+
+7. Использовать импорт в `head`
+> Использовать импорт типа `<link href="/styles.css" rel="stylesheet">` **НЕ ИСПОЛЬЗОВАТЬ** `<style>@import url("/styles.css");</style>`
+
+8. 
