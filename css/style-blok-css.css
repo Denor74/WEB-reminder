@@ -4,7 +4,7 @@
 }
 
 .before-after::before {
-    content: "Подстказка";
+    content: "Подсказка";
     color: white;
     background-color: blueviolet;
     position: absolute;
@@ -46,7 +46,7 @@ a::after {
     display: inline-block;
     width: 10px;
     height: 10px;
-    background-image: url(/img/arrow-alt-right.svg);
+    background-image: url(../img/arrow-alt-right.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
