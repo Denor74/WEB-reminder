@@ -20,22 +20,26 @@
 
 ol {
     list-style: none;
-    counter-reset: numbers; /*Nunber - обозначает переменную и устанавливает счётчик */
+    counter-reset: numbers;
+    /*Nunber - обозначает переменную и устанавливает счётчик */
     font-size: 18px;
 }
 
 
 li::before {
     counter-increment: numbers;
-    content: "0" counter(numbers); /* выводим счётчик с помощью content в котором записываем первый символ*/
+    content: "0"counter(numbers);
+    /* выводим счётчик с помощью content в котором записываем первый символ*/
     font-size: 30px;
     color: blue;
 }
+
 a {
     display: inline-block;
     text-decoration: none;
     font-size: 20px;
 }
+
 a::after {
     content: "";
     margin-left: 5px;
@@ -53,41 +57,51 @@ a:hover::after {
     transition: 00.3s;
     transform: translateX(20px);
 }
+
 .p-first {
     font-size: 20px;
 }
+
 .p-first::first-letter {
     color: brown;
 }
+
 .p-first-line::first-line {
     color: blueviolet;
     max-width: 200px;
     font-size: 20px;
 }
+
 input {
     display: block;
     margin-top: 20px;
     font-size: 20px;
 }
+
 input::placeholder {
     color: antiquewhite;
-    transition: 0,5s;
+    transition: 0, 5s;
 }
+
 input:focus::placeholder {
     color: transparent;
-    transition: 0,5s;
+    transition: 0, 5s;
 }
+
 .selection::selection {
     color: beige;
     background-color: tomato;
 }
+
 ul li::marker {
     color: red;
 }
+
 /*dialog & backdrop ЕСли в dialog прописать open - форма будет всегда видна*/
 dialog {
     width: 300px;
 }
+
 dialog::backdrop {
     background: rgba(0, 0, 0, 0.7);
 }
