@@ -7,6 +7,8 @@
 License: [MIT](./license.md "Смотреть лицензию")
 
 ---
+[Смотреть примеры в HTML](https://Denor74.github.io/WEB-reminder)
+---
 ### Содержание:
 
 1. [Рекомендации по быстрой загрузке HTML и CSS](boost-css.md)
