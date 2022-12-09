@@ -19,5 +19,8 @@ License: [MIT](./license.md "Смотреть лицензию")
 
 ## Базовый JS. Старт
 
+> ***Для очистки консоли используйте кнопку ban-circle  или сочетание Ctrl + L***
+
 1. Сообщства JS [https://stackoverflow.com/](https://stackoverflow.com/); [ТОСТЕР.РУ/toster.ru](https://qna.habr.com/)
 2. [Типы данных, переменные, константы](jscript/datatypes.md)
+3. Функции [Alert, Prompt](jscript/alertprompt.md)
