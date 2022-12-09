@@ -21,15 +21,15 @@
 
 `Prompt()` — «собрат» функции `alert()`. Отображает диалоговое окно с *запросом на ввод текста* `Prompt()` можно использовать для ввода информации
 
-    `const fullname = prompt('Назовите полное имя А. С. Пушкина');   
-    console.log(fullname);`  
+    const fullname = prompt('Назовите полное имя А. С. Пушкина');   
+    console.log(fullname);  
 
-    `const firstOperand = prompt('Введите первое число');  
+    const firstOperand = prompt('Введите первое число');  
     const secondOperand = prompt('Введите второе число');  
     const result = firstOperand * secondOperand;  
     console.log(  
       'Произведение чисел', firstOperand, 'и', secondOperand, 'равно', result  
-    );`
+    );
 
 > Для `prompt()` можно указать значение по умолчанию:
 
@@ -41,6 +41,6 @@
 
 ### Собственный пример:
 
-`usd = prompt('Введите $');  
+usd = prompt('Введите $');  
 rub = usd * 61,2;  
-alert(usd + '$ сейчас стоит: ' + rub + 'руб.');  `
+alert(usd + '$ сейчас стоит: ' + rub + 'руб.');  
