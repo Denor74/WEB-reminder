@@ -33,33 +33,33 @@
 
         `<h2 onclick="console.log('Это тот блок')">Тест консоли</h2>`
 
-> **Назначение обработчика через свойство**
+### Назначение обработчика через свойство**
 
-        `<h2 id="testTextField">Тест консоли</h2>`
+        <h2 id="testTextField">Тест консоли</h2>
 
-        `const  testTextField = document.querySelector('#testTextField');
+        const  testTextField = document.querySelector('#testTextField');
         testTextField.onclick = function() {
         // тело обработчика
         console.log('Это тот блок');
         // конец тела обработчика
-        }`
+        }
 
 или
 
-        `document.querySelector('#testTextField').onclick = function() {
+        document.querySelector('#testTextField').onclick = function() {
           // тело обработчика
           console.log('Это тот блок');
           // конец тела обработчика
-        }`
+        }
 
 Удалить такой обработчик можно:
 
-        `document.querySelector('#testTextField').onclick = null;`
+        document.querySelector('#testTextField').onclick = null;
 
 
 > *У этого метода (как и у предыдущего) существует один серьёзный недостаток — нельзя назначить более одного обработчика на событие таким образом. Например, текст в поле ввода проверяется на валидность через один обработчик при событии input, а через другой обработчик — отправляется запрос на сервер. В этом случае, когда назначается на поле ввода второй обработчик, первый затирается.*
 
-> **Назначение обработчика через addEventListener**
+### Назначение обработчика через addEventListener**
 
 > Наиболее современный способ назначения обработчика — назначение через метод `addEventListener`.
 
@@ -70,7 +70,7 @@
 
 Этот способ назначения обработчика наиболее предпочтителен, так как он лишён основного их недостатка — `addEventListener()` позволяет ***назначить более одного обработчика на событие***:
 
-        `<h2 id="testTextField">Тест консоли</h2>`
+        <h2 id="testTextField">Тест консоли</h2>`
 
         `const  testTextField = document.querySelector('#testTextField');
         testTextField.addEventListener('click', 
@@ -78,19 +78,48 @@
             // тело обработчика
             console.log('Это тот блок');
            // конец тела обработчика
-        })`
+        })
 
 или
 
-       ` document.querySelector('#testTextField').addEventListener('click', 
+       document.querySelector('#testTextField').addEventListener('click', 
           (event) => {
             console.log('Это тот блок');
-        })`
+        })
 
+### Доступ к элементу через this
 
+Так же [смотри](https://denor74.github.io/WEB-reminder/jscript/this.html) примеры в html
 
+> Внутри метода-обработчика можно получить доступ к элементу, на который назначен обработчик. Делается это через псевдоэлемент `this`: 
 
+        document.querySelector('#testTextField').addEventListener('click', 
+          (event) => {
+            this.textContent = 'По мне кликнули!';
+        })
 
+### Объект события
 
+> **Объект события** — это объект, внутри которого находится различная информация о событии.
 
+Когда происходит событие, браузер создаёт объект события, записывает в него детали и передаёт его в качестве аргумента функции-обработчику. То есть объект события приходит первым аргументом в функцию-обработчик.
+
+> В объекте события могут быть различные данные:
+
+                * *event.type* — тип события (например, ‘click’);
+                * *event.target* — элемент, на котором было вызвано событие;
+                * *event.target.value* — текущее значение поля ввода, на которое добавлен обработчик события (только для input);
+                * *event.currentTarget* — элемент, на котором сработал обработчик;
+                * *event.clientX / event.clientY* — координаты курсора в момент клика (относительно окна, для событий мыши).
+
+                document.querySelector('#testTextField').addEventListener('click', 
+                 (event) => {
+                   this.textContent = 'Это событие: ' + event.type;
+                })
+
+### addEventListener-event
+
+> [Смотреть](https://denor74.github.io/WEB-reminder/jscript/event.html) определение координат по клику на тексте в HTML
+
+### Предотвращение поведения по умолчанию
 
