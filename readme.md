@@ -24,5 +24,5 @@ License: [MIT](./license.md "Смотреть лицензию")
 1. Сообщства JS [https://stackoverflow.com/](https://stackoverflow.com/); [ТОСТЕР.РУ/toster.ru](https://qna.habr.com/)
 2. [Типы данных, переменные, константы](jscript/datatypes.md)
 3. Функции [Alert, Prompt](jscript/alertprompt.md)
-4. 6.6 - Задача на изменение html-элемента (задача — изменить текст в определенном html-элементе на тот, который пользователь введёт с помощью `prompt()`)
-5. 6-7 События
+4. 6.6 - [Задача на изменение html](jscript/index-6-6.html)-элемента (задача — изменить текст в определенном html-элементе на тот, который пользователь введёт с помощью `prompt()`)
+5. [[6-7 События](jscript/script-6-7.js)
