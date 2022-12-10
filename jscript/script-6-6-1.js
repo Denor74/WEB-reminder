@@ -1,4 +1,4 @@
-const userText = prompt('Введите текст');
-const userTextField = document.querySelector('#userTextField');
-userTextField.textContent = userText;
-console.log('Текст в блоке с id userTextField изменён на', userText);
+const userTextIDFild = prompt('Введите текст');
+const userTextIDField = document.querySelector('#userTextIDField');
+userTextIDField.textContent = userTextID;
+console.log('Текст в блоке с id userTextField изменён на', userTextID);
