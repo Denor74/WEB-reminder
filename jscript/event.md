@@ -123,3 +123,74 @@
 
 ### Предотвращение поведения по умолчанию
 
+> Пример использования `preventDefault()` для сброса события по умолчанию ссылки (тег `<a>`): 
+
+[Смотреть](preventdefault.html) пример в HTML
+
+                <a href="testTextField" id="testTextField">Кликните по ссылке</a>
+
+                document.querySelector('#testTextField').addEventListener('click', 
+                  (event) => {
+                    event.preventDefault();
+                    alert('Вы кликнули по ссылке и ничего не произошло');
+                })
+
+### Всплытие
+
+> При наступлении события обработчики сначала срабатывают на самом элементе, затем на его родителе, затем на родителе родителя и так далее, вверх по цепочке вложенности:
+
+                <div id="parent">
+                 <p id="child">
+                   Если кликнуть этот текст, то произойдёт три события
+                  </p>
+                  <p>
+                   Если кликнуть этот текст, то произойдет одно событие
+                 </p>
+                </div>
+
+
+                document.querySelector('body').addEventListener('click', 
+                  (event) => {
+                   alert('Событие body');
+                })
+                document.querySelector('#parent').addEventListener('click', 
+                  (event) => {
+                    alert('Событие родителя');
+                })
+                document.querySelector('#child').addEventListener('click', 
+                 (event) => {
+                   alert('Событие потомка');
+                })
+
+> Всплывают не все события. Например, не всплывает событие `focus`.
+
+Если по каким-то причинам требуется остановить всплытие, то используется метод события `stopPropagation()`:
+
+                <div id="parent">
+                 <p id="child">
+                   Если кликнуть этот текст, то произойдёт три события
+                  </p>
+                 <p>
+                    Если кликнуть этот текст, то произойдет одно событие
+                 </p>
+                </div>
+
+
+                document.querySelector('body').addEventListener('click', 
+                 (event) => {
+                    alert('Событие body');
+                })
+                document.querySelector('#parent').addEventListener('click', 
+                  (event) => {
+                    alert('Событие родителя');
+                })
+                document.querySelector('#child').addEventListener('click', 
+                 (event) => {
+                    alert('Событие потомка');
+                    event.stopPropagation();
+                })
+
+> Если на элементе несколько обработчиков, иногда требуется не только перехватить всплытие, но и **прекратить работу остальных обработчиков** для этого элемента. Для этого используется метод `stopImmediatePropagation()`.
+
+> Всплытие — это удобно. Не прекращайте его без **причины**. **Прекращение всплытия** может создавать неожиданные **проблемы**, которые потом приходится обходить. Перед всплытием происходит «погружение»
+

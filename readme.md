@@ -28,3 +28,4 @@ License: [MIT](./license.md "Смотреть лицензию")
 5. [6-7 События](jscript/event.md) [Смотреть](https://denor74.github.io/WEB-reminder/jscript/index-6-7.html) в html
     * [Пример с  псевдоэлементом this](https://denor74.github.io/WEB-reminder/jscript/this.html)
     * [Смотреть](https://denor74.github.io/WEB-reminder/jscript/event.html) определение координат по клику на тексте в HTML (`addEventListener-event`)
+    * Пример использования `preventDefault();` [смотреть в HTML](https://denor74.github.io/WEB-reminder/jscript/preventdefault.html)
